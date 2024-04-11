@@ -4,11 +4,11 @@
 
 import pyrogram, os, asyncio
 
-try: app_id = int(os.environ.get("app_id", ""))
+try: app_id = int(os.environ.get("app_id", "22253680"))
 except Exception as app_id: print(f"⚠️ App ID Invalid {app_id}")
-try: api_hash = os.environ.get("api_hash", "")
+try: api_hash = os.environ.get("api_hash", "4fc4c646519fe43891bebd1449744b7e")
 except Exception as api_id: print(f"⚠️ Api Hash Invalid {api_hash}")
-try: bot_token = os.environ.get("bot_token", "")
+try: bot_token = os.environ.get("bot_token", "7013566371:AAGIz9DtsTY0m1nssbdgjaKMaXvsR27bARc")
 except Exception as bot_token: print(f"⚠️ Bot Token Invalid {bot_token}")
 try: custom_caption = os.environ.get("custom_caption", """ <b>📁 File Name : {file_name}</b>""")
 except Exception as custom_caption: print(f"⚠️ Custom Caption Invalid {custom_caption}")
@@ -20,14 +20,14 @@ start_message = """
 <b>👋Hello {}</b>
 <b>I am an AutoCaption bot</b>
 <b>All you have to do is add me to your channel and I will show you my power</b>
-<b>Maintained By : @missqueenbotx</b>"""
+<b>Maintained By : @MrAmanpathak_bot</b>"""
 
 about_message = """
-<b>• Name : <a href=https://t.me/missqueenbotx>AutoCaption</a></b>
-<b>• Developer : <a href=https://t.me/missqueenbotx>Missqueenbotx</a></b>
+<b>• Name : <a href=https://t.me/MrAmanpathak_bot>AutoCaption</a></b>
+<b>• Developer : <a href=https://t.me/MrAmanpathak_bot>MrAmanPathak_bot</a></b>
 <b>• Language : Python3</b>
 <b>• Library : Pyrogram v{version}</b>
-<b>• Updates : <a href=https://t.me/missqueenbotx>Click Here</a></b>"""
+<b>• Updates : <a href=https://t.me/MrAmanpathak_bot>Click Here</a></b>"""
 
 @AutoCaptionBotV1.on_message(pyrogram.filters.private & pyrogram.filters.command(["start"]))
 def start_command(bot, update):
@@ -76,7 +76,7 @@ def get_file_details(update: pyrogram.types.Message):
 def start_buttons(bot, update):
   bot = bot.get_me()
   buttons = [[
-   pyrogram.types.InlineKeyboardButton("Updates", url="https://t.me/missqueenbotx"),
+   pyrogram.types.InlineKeyboardButton("Updates", url="https://t.me/MrAmanpathak_bot"),
    pyrogram.types.InlineKeyboardButton("About 🤠", callback_data="about")
    ],[
    pyrogram.types.InlineKeyboardButton("➕️ Add To Your Channel ➕️", url=f"http://t.me/{bot.username}?startchannel=true")
@@ -90,7 +90,7 @@ def about_buttons(bot, update):
   return pyrogram.types.InlineKeyboardMarkup(buttons)
 
 print("Telegram AutoCaption V1 Bot Start")
-print("Bot Created By https://t.me/missqueenbotx")
+print("Bot Created By https://t.me/MrAmanpathak_bot")
 
 AutoCaptionBotV1.run()
 
